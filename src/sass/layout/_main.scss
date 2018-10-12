@@ -1,0 +1,144 @@
+body {
+  font-family: $base-font-family;
+  font-size: 14px;
+  line-height: 1.7;
+  min-width: 320px;
+  color: $base-text-color;
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1090px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+a {
+	color: $link-color;
+
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+
+h1 {
+	font-size: 35px;
+	font-family: $headings-font-family;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+.photodiary {
+	img {
+		width: 100%;
+	}
+
+	.img-holder {
+		margin-bottom: 50px;
+	}
+}
+
+.secondary-link {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $gray-light;
+	font-family: $secondary-font-family;
+
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+
+.common-section {
+	margin-bottom: 20px;
+
+	h2, h3, h4 {
+		margin-bottom: 30px;
+	}
+}
+
+.content-wrap {
+	max-width: 900px;
+	counter-reset: anotherReset;
+}
+
+.round-numbers-list {
+	list-style: none;
+	counter-reset: customCounter;
+	padding-left: 40px;
+
+	li {
+		counter-increment: customCounter;
+		position: relative;
+		margin-bottom: 15px;
+		font-weight: bold;
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -40px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: $link-hover-color;
+			border: 2px solid $black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			content: counter(customCounter);
+			color: #fff;
+			font-size: 16px;
+			font-weight: bolder;
+		}
+	}
+}
+
+
+.done-list {
+	list-style: none;
+	padding-left: 40px;
+
+	li {
+		position: relative;
+		margin-bottom: 15px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -40px;
+			width: 30px;
+			height: 15px;
+			border: 20px solid transparent;
+			border-left: 20px solid blue;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -32px;
+			width: 30px;
+			height: 5px;
+			border: 12px solid transparent;
+			border-left: 12px solid yellow;
+		}
+	}
+}
